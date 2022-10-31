@@ -226,8 +226,6 @@ body {
   left: 0px;
   top: 892px;
 
-  /* Base/White */
-
   background: #ffffff;
 }
 
@@ -265,29 +263,38 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
- 
 
   color: #667085;
 }
 
-a {
-}
-a:hover {
-}
-
-button {
-}
-button:hover {
-}
-button:focus,
-button:focus-visible {
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
+@media only screen and (min-width: 768px) {
+  .footer-section {
+    min-width: 768px;
+    top: 998px;
   }
-  a:hover {
+  .footer-container {
+    min-width: 768px;
   }
-  button {
+  .footer-content {
+    min-width: 768px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    height: 64px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .footer-section,
+  .footer-container,
+  .footer-content {
+    min-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-section,
+  .footer-container,
+  .footer-content {
+    min-width: 1012px;
   }
 }
