@@ -1,3 +1,8 @@
+import MainFooter from "./MainFooter";
+import ProfileInfo from "./ProfileInfo";
+import ProfileLinks from "./ProfileLinks";
+import ProfileFooter from "./ProfileFooter";
+
 function App() {
   return (
     <>
@@ -5,99 +10,13 @@ function App() {
         <div className="main-section">
           <div className="main-container">
             <div className="main-content">
-              <div className="main-profile-section">
-                <div className="main-profile-img">
-                  <img id="profile__img" />
-                </div>
-                <div className="main-profile-name">
-                  <p id="twitter">luckidubi</p>
-                </div>
-                <div className="main-profile-name hidden">
-                  <p id="slack">@Luckidubi</p>
-                </div>
-              </div>
-              <div className="main-link-section">
-                <div id="" className="main-link-row">
-                  <a
-                    id="twitter"
-                    className="main-link-button"
-                    href="https://twitter.com/luckidubi/"
-                  >
-                    Twitter Link
-                  </a>
-                </div>
-                <div id="" className="main-link-row">
-                  <a
-                    id="btn__zuri"
-                    className="main-link-button"
-                    href="https://training.zuri.team/"
-                  >
-                    Zuri Team
-                  </a>
-                </div>
-                <div id="" className="main-link-row">
-                  <a
-                    id="books"
-                    title="This is where you find books about design and coding"
-                    className="main-link-button"
-                    href="https://books.zuri.team/"
-                  >
-                    Zuri Books
-                  </a>
-                </div>
-                <div id="" className="main-link-row">
-                  <a
-                    id="book__python"
-                    title="A python programming book with precise examples to take you from novice to pro"
-                    className="main-link-button"
-                    href="https://books.zuri.team/python-for-beginners?ref_id=Luckidubi"
-                  >
-                    Python Books
-                  </a>
-                </div>
-                <div id="" className="main-link-row">
-                  <a
-                    id="pitch"
-                    title="With a huge database of coders, we help you do a background check on any coder of choice"
-                    className="main-link-button"
-                    href="https://background.zuri.team/"
-                  >
-                    Background Check for Coders
-                  </a>
-                </div>
-                <div id="" className="main-link-row">
-                  <a
-                    id="book__design"
-                    title="Get a free book on design, offered by Zuri"
-                    className="main-link-button"
-                    href=" https://books.zuri.team/design-rules"
-                  >
-                    Zuri Team
-                  </a>
-                </div>
-              </div>
+              <ProfileInfo />
+              <ProfileLinks />
             </div>
           </div>
-          <div className="main-footer">
-            <div className="main-footer-container">
-              <div className="main-footer-content">
-                <div className="main-footer-social-icons">
-                  <img src="/slack.png" alt="slack icon" />{" "}
-                  <img src="/Social icon.png" alt="github icon" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProfileFooter />
         </div>
-        <div className="footer-section">
-          <div className="footer-container">
-            <div className="footer-content">
-              <img src="/Zuri.Internship_Logo.png" alt="Zuri Internship logo" />
-              <p className="footer-text">HNG Internship 9 Frontend Task</p>
-              <img src="/I4G.png" alt="14G Logo" />
-            </div>
-          </div>
-        </div>
+        <MainFooter/>
       </div>
     </>
   );
