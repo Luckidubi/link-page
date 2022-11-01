@@ -39,7 +39,7 @@ export default function ProfileLinks() {
           title="Get a free book on design, offered by Zuri"
           url=" https://books.zuri.team/design-rules"
         >
-          Zuri Team
+          Design Books
         </Link>
       </div>
     </>
