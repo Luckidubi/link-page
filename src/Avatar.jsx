@@ -4,7 +4,7 @@ export default function Avatar(props) {
       <div className="main-profile-img">
         <img
           id="profile__img"
-          src="/pic.jpeg"
+          src="/pics.jpeg"
           alt="profile picture"
           style={{ width: "88px", borderRadius: "275px" }}
         />
