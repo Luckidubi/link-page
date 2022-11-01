@@ -192,6 +192,15 @@ body {
   color: #101828;
 }
 
+.main-link-button:hover {
+  background: #d0d5dd;
+
+  border: 1px solid #d0d5dd;
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+
 .main-footer {
   display: flex;
   flex-direction: column;
