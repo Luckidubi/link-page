@@ -16,7 +16,7 @@ function App() {
           </div>
           <ProfileFooter />
         </div>
-        <MainFooter/>
+        <MainFooter />
       </div>
     </>
   );

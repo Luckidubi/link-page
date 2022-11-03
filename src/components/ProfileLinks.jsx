@@ -41,6 +41,13 @@ export default function ProfileLinks() {
         >
           Design Books
         </Link>
+        <Link
+          id="contact"
+          
+          url="/contact"
+        >
+         Contact Me
+        </Link>
       </div>
     </>
   );
