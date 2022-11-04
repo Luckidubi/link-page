@@ -2,22 +2,23 @@ import MainFooter from "./MainFooter";
 import ProfileInfo from "./ProfileInfo";
 import ProfileLinks from "./ProfileLinks";
 import ProfileFooter from "./ProfileFooter";
+import Home from "../../pages/Home";
+import Contact from "../../pages/Contact";
+import {Routes, Route} from 'react-router-dom'
+import Layout from "./Layout";
 
 function App() {
   return (
     <>
-      <div className="main">
-        <div className="main-section">
-          <div className="main-container">
-            <div className="main-content">
-              <ProfileInfo />
-              <ProfileLinks />
-            </div>
-          </div>
-          <ProfileFooter />
-        </div>
-        <MainFooter />
-      </div>
+    <Routes>
+      <Route element={<Layout/>}>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      
+      </Route>
+
+
+      </Routes>
     </>
   );
 }
