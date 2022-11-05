@@ -1,11 +1,16 @@
-import MainFooter from "../src/components/MainFooter";
+
 import { useState } from "react";
 export default function Contact() {
   const [checked, setChecked] = useState(false);
-
-  const handleChange = () =>{
-    setChecked(c=>!c)
-  }
+  const name = "Dubem Nwodo";
+  const handleChange = () => {
+    setChecked((c) => !c);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    alert("Thanks for reaching out! You'll recieve an email shortly");
+  };
   return (
     <>
       <div className="contact-container">
@@ -21,7 +26,7 @@ export default function Contact() {
 
           <div className="contact-form-content">
             <div className="contact-form-body">
-              <form onSubmit="">
+              <form onSubmit={handleSubmit}>
                 <div className="contact-form-fields">
                   <div className="contact-form-name-row">
                     <div className="contact-form-first-name">
@@ -30,7 +35,6 @@ export default function Contact() {
                         <input
                           className="contact-input-style"
                           id="first_name"
-                          onChange=""
                           placeholder="Enter your first name"
                           required
                         />
@@ -45,7 +49,6 @@ export default function Contact() {
                           id="last_name"
                           type="text"
                           placeholder="Enter your last name"
-                          onChange=""
                           required
                         />
                       </label>
@@ -60,7 +63,6 @@ export default function Contact() {
                         id="email"
                         type="email"
                         placeholder="yourname@email.com"
-                        onChange=""
                         required
                       />
                     </label>
@@ -71,7 +73,6 @@ export default function Contact() {
                       <div id="label">Message</div>
                       <textarea
                         id="message"
-                        onChange=""
                         placeholder="Send me a message and I'll reply you as soon as possible..."
                         required
                       />
@@ -90,7 +91,7 @@ export default function Contact() {
                     </div>
                     <div className="check-text">
                       <label>
-                        You agree to providing your data to {"name"} who may
+                        You agree to providing your data to {name} who may
                         contact you.
                       </label>
                     </div>

@@ -1,2 +1,2 @@
 # link-page
-Page to display a profile and links to various websites
+A web Page to display a profile and links to various websites and a contact page.
