@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 export default function Contact() {
   const [checked, setChecked] = useState(false);
@@ -8,7 +7,7 @@ export default function Contact() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-   e.target.form.reset()
+    e.target.form.reset();
     alert("Thanks for reaching out! You'll recieve an email shortly");
   };
   return (
@@ -57,15 +56,15 @@ export default function Contact() {
                   </div>
                   <div className="contact-form-email">
                     <label htmlFor="email">
-                      <div id="label">Email</div>
-                      <input
-                        className="contact-input-style"
-                        id="email"
-                        type="email"
-                        placeholder="yourname@email.com"
-                        required
-                      />
-                    </label>
+                    <div id="label">Email</div></label>
+                    <input
+                      className="contact-input-style"
+                      id="email"
+                      type="email"
+                      placeholder="yourname@email.com"
+                      required
+                    />
+
                     <div id="display"></div>
                   </div>
                   <div className="contact-form-message">
@@ -82,7 +81,7 @@ export default function Contact() {
                   <div className="contact-form-check-box">
                     <div className="check-input">
                       <input
-                      id="check"
+                        id="check"
                         name="check"
                         type="checkbox"
                         checked={checked}
@@ -99,7 +98,11 @@ export default function Contact() {
                     <div id="display"></div>
                   </div>
                   <div className="contact-form-submit-btn">
-                    <button id="btn__submit" onClick={handleSubmit} type="submit">
+                    <button
+                      id="btn__submit"
+                      onClick={handleSubmit}
+                      type="submit"
+                    >
                       Send Message
                     </button>
                   </div>
