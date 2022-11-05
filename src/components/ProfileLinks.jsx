@@ -1,5 +1,5 @@
 import Link from "./Link";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 export default function ProfileLinks() {
   const navigate = useNavigate();

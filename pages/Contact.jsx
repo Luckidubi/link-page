@@ -30,7 +30,7 @@ export default function Contact() {
                 <div className="contact-form-fields">
                   <div className="contact-form-name-row">
                     <div className="contact-form-first-name">
-                      <label>
+                      <label htmlFor="first_name">
                         <div id="label">First name</div>
                         <input
                           className="contact-input-style"
@@ -42,7 +42,7 @@ export default function Contact() {
                       <div id="display"></div>
                     </div>
                     <div className="contact-form-last-name">
-                      <label>
+                      <label htmlFor="last_name">
                         <div id="label">Last name</div>
                         <input
                           className="contact-input-style"
@@ -56,7 +56,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="contact-form-email">
-                    <label>
+                    <label htmlFor="email">
                       <div id="label">Email</div>
                       <input
                         className="contact-input-style"
@@ -69,7 +69,7 @@ export default function Contact() {
                     <div id="display"></div>
                   </div>
                   <div className="contact-form-message">
-                    <label>
+                    <label htmlFor="message">
                       <div id="label">Message</div>
                       <textarea
                         id="message"
@@ -82,6 +82,7 @@ export default function Contact() {
                   <div className="contact-form-check-box">
                     <div className="check-input">
                       <input
+                      id="check"
                         name="check"
                         type="checkbox"
                         checked={checked}
@@ -90,7 +91,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="check-text">
-                      <label>
+                      <label htmlFor="check">
                         You agree to providing your data to {name} who may
                         contact you.
                       </label>
