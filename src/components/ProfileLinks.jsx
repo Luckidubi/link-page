@@ -1,6 +1,12 @@
 import Link from "./Link";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfileLinks() {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate("/contact");
+  };
   return (
     <>
       <div className="main-link-section">
@@ -41,12 +47,8 @@ export default function ProfileLinks() {
         >
           Design Books
         </Link>
-        <Link
-          id="contact"
-          
-          url="/contact"
-        >
-         Contact Me
+        <Link id="contact" onClick={handleClick}>
+          Contact Me
         </Link>
       </div>
     </>

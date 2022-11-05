@@ -3,11 +3,15 @@
   border: 0;
   margin: 0;
   font-size: 100%;
+  border-style: none;
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+*:focus {
+  border-style: none;
 }
 
 body {
@@ -452,8 +456,7 @@ body {
   order: 0;
   align-self: stretch;
 }
-.contact-form-first-name input {
-}
+
 .contact-input-style {
   box-sizing: border-box;
   display: flex;
@@ -469,6 +472,9 @@ body {
   border-radius: 8px;
   order: 1;
   align-self: stretch;
+}
+.contact-input-style:focus {
+  border-color: none;
 }
 #label {
   font-family: "Inter";
@@ -512,8 +518,7 @@ input::placeholder {
   order: 1;
   align-self: stretch;
 }
-.contact-form-last-name input {
-}
+
 .contact-form-email {
   display: flex;
   flex-direction: column;
@@ -526,8 +531,7 @@ input::placeholder {
   order: 0;
   align-self: stretch;
 }
-.contact-form-email input {
-}
+
 .contact-form-message {
   display: flex;
   flex-direction: column;
@@ -632,6 +636,55 @@ input::placeholder {
   line-height: 24px;
 
   color: #ffffff;
+}
+.contact-form-submit-btn button:hover {
+  background: #175cd3;
+  border: 1px solid #175cd3;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+.contact-form-submit-btn button:focus {
+  background: #1570ef;
+  border: 1px solid #1570ef;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+  border-radius: 8px;
+}
+.contact-form-submit-btn button:disabled {
+  background: #b2ddff;
+
+  border: 1px solid #b2ddff;
+  pointer-events: none;
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+
+form:invalid button {
+  background: #b2ddff;
+
+  border: 1px solid #b2ddff;
+  pointer-events: none;
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+
+.check-input input:focus {
+  background: #ffffff;
+  border: 1px solid #84caff;
+  box-shadow: 0px 0px 0px 4px #d1e9ff;
+  border-radius: 6px;
+}
+.check-input input:disabled {
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+}
+.contact-form-message textarea:focus {
+  background: #ffffff;
+  border: 1px solid #84caff;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+  border-radius: 8px;
 }
 
 @media only screen and (min-width: 768px) {

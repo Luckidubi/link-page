@@ -1,6 +1,11 @@
 import MainFooter from "../src/components/MainFooter";
-
+import { useState } from "react";
 export default function Contact() {
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () =>{
+    setChecked(c=>!c)
+  }
   return (
     <>
       <div className="contact-container">
@@ -27,6 +32,7 @@ export default function Contact() {
                           id="first_name"
                           onChange=""
                           placeholder="Enter your first name"
+                          required
                         />
                       </label>
                       <div id="display"></div>
@@ -40,6 +46,7 @@ export default function Contact() {
                           type="text"
                           placeholder="Enter your last name"
                           onChange=""
+                          required
                         />
                       </label>
                       <div id="display"></div>
@@ -54,6 +61,7 @@ export default function Contact() {
                         type="email"
                         placeholder="yourname@email.com"
                         onChange=""
+                        required
                       />
                     </label>
                     <div id="display"></div>
@@ -65,13 +73,20 @@ export default function Contact() {
                         id="message"
                         onChange=""
                         placeholder="Send me a message and I'll reply you as soon as possible..."
+                        required
                       />
                     </label>
                     <div id="display"></div>
                   </div>
                   <div className="contact-form-check-box">
                     <div className="check-input">
-                      <input name="" type="checkbox" checked="" onChange="" />
+                      <input
+                        name="check"
+                        type="checkbox"
+                        checked={checked}
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div className="check-text">
                       <label>
