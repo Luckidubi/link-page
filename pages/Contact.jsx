@@ -8,7 +8,7 @@ export default function Contact() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    e.target.reset();
+   e.target.form.reset()
     alert("Thanks for reaching out! You'll recieve an email shortly");
   };
   return (
@@ -26,7 +26,7 @@ export default function Contact() {
 
           <div className="contact-form-content">
             <div className="contact-form-body">
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className="contact-form-fields">
                   <div className="contact-form-name-row">
                     <div className="contact-form-first-name">
@@ -98,7 +98,7 @@ export default function Contact() {
                     <div id="display"></div>
                   </div>
                   <div className="contact-form-submit-btn">
-                    <button id="btn__submit" type="submit">
+                    <button id="btn__submit" onClick={handleSubmit} type="submit">
                       Send Message
                     </button>
                   </div>
